@@ -1,0 +1,25 @@
+# UK Air Quality Data Pipeline (ESG Analytics)
+
+## 📌 Project Overview
+This project is an automated **End-to-End Data Pipeline** designed to monitor and analyze environmental impact across major UK cities (London, Birmingham, Glasgow, and Manchester). 
+
+By transitioning from static datasets to a **live-streaming architecture**, this project demonstrates how to build a scalable monitoring system that provides actionable insights into urban pollution levels ($NO_2$, $PM_{2.5}$, and $O_3$).
+
+## 🛠️ Tech Stack
+* **Extraction:** Python (Requests, Pandas)
+* **API:** OpenWeatherMap Air Pollution API
+* **Orchestration:** GitHub Actions (CI/CD for Data)
+* **Storage/Cloud:** Google BigQuery (Data Warehouse)
+* **Visualization:** Power BI
+
+## 🚀 Key Features
+* **Automated Extraction:** A scheduled Python script fetches real-time Air Quality Index (AQI) metrics daily.
+* **Cloud Integration:** Data is cleaned and pushed directly to a BigQuery table, creating a historical record of pollution trends.
+* **Infrastructure as Code:** Uses GitHub Actions to automate the workflow, removing the need for manual data handling.
+* **ESG Focused:** Built with Sustainability and Governance reporting in mind.
+
+## 📈 Roadmap
+- [x] Day 1: API Integration and local Python extraction.
+- [ ] Day 2: Cloud Database (BigQuery) setup and schema design.
+- [ ] Day 3: Workflow automation with GitHub Actions.
+- [ ] Day 4: Live Power BI dashboard development.
