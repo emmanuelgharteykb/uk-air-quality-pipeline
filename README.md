@@ -23,3 +23,16 @@ By transitioning from static datasets to a **live-streaming architecture**, this
 - [ ] Day 2: Cloud Database (BigQuery) setup and schema design.
 - [ ] Day 3: Workflow automation with GitHub Actions.
 - [ ] Day 4: Live Power BI dashboard development.
+
+## 🛠 Technical Skills Demonstrated (Day 1)
+
+### 🛰️ Data Engineering & ETL
+* **REST API Integration:** Engineered an extraction layer using Python `requests` to consume live JSON payloads from OpenWeatherMap.
+* **Data Transformation:** Leveraged `pandas` to normalize nested JSON objects into structured DataFrames, ensuring data integrity for downstream analytics.
+* **ESG Analytics:** Targeted specific environmental metrics ($PM_{2.5}$, $NO_2$, $O_3$) to align with corporate Sustainability and Governance reporting standards.
+
+### ⚙️ DevOps & System Architecture
+* **Environment Isolation:** Implemented Python Virtual Environments (`venv`) to manage dependencies and adhere to PEP 668 (externally-managed environments) standards.
+* **Security Best Practices:** Utilized `python-dotenv` for secrets management, ensuring API credentials remain decoupled from the source code.
+* **Version Control:** Employed a professional Git Flow, utilizing feature branches and Pull Requests to manage the codebase.
+* **Dependency Management:** Generated `requirements.txt` to ensure 100% reproducibility across different development environments.
