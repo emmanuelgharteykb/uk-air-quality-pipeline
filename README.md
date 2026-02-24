@@ -20,7 +20,7 @@ By transitioning from static datasets to a **live-streaming architecture**, this
 
 ## 📈 Roadmap
 - [x] Day 1: API Integration and local Python extraction.
-- [ ] Day 2: Cloud Database (BigQuery) setup and schema design.
+- [x] Day 2: Cloud Database (BigQuery) setup and schema design.
 - [ ] Day 3: Workflow automation with GitHub Actions.
 - [ ] Day 4: Live Power BI dashboard development.
 
@@ -36,3 +36,20 @@ By transitioning from static datasets to a **live-streaming architecture**, this
 * **Security Best Practices:** Utilized `python-dotenv` for secrets management, ensuring API credentials remain decoupled from the source code.
 * **Version Control:** Employed a professional Git Flow, utilizing feature branches and Pull Requests to manage the codebase.
 * **Dependency Management:** Generated `requirements.txt` to ensure 100% reproducibility across different development environments.
+
+## 🛠 Technical Skills Demonstrated (Day 2)
+
+### ☁️ Cloud Infrastructure & Data Warehousing
+* **Google BigQuery Integration:** Engineered a high-performance "Writer" function to stream live DataFrames directly into a BigQuery table using the `google-cloud-bigquery` library and `pyarrow` engine.
+* **Schema Design & Management:** Architected a relational table structure in the cloud to support time-series analysis, enabling the tracking of air quality fluctuations over time.
+* **IAM & Security Orchestration:** Configured Google Cloud Service Accounts with granular IAM roles. Managed secure authentication via JSON key files, adhering to the principle of least privilege.
+
+
+### 🔒 Professional DevOps Hygiene
+* **Secrets Management (Level 2):** Expanded the security layer to include Cloud Project IDs and Dataset IDs within `.env`, ensuring the codebase is entirely generic and portable.
+* **Environment Protection:** Rigorously maintained `.gitignore` protocols to prevent the accidental exposure of Cloud Service Account keys to public repositories.
+* **Error Resilience:** Implemented `try-except` blocks to handle network timeouts and authentication failures, ensuring the pipeline provides clear logs for troubleshooting.
+
+### 📊 Data Integrity & Validation
+* **Idempotency & Appending:** Verified that the pipeline successfully appends new observations without duplicating historical data, maintaining a clean "Source of Truth" in the warehouse.
+* **Validation Testing:** Performed live "end-to-end" tests, confirming that real-time API value changes (NO2 and PM2.5) were accurately reflected in the BigQuery Preview layer.
