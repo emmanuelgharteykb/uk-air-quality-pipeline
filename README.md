@@ -21,7 +21,7 @@ By transitioning from static datasets to a **live-streaming architecture**, this
 ## 📈 Roadmap
 - [x] Day 1: API Integration and local Python extraction.
 - [x] Day 2: Cloud Database (BigQuery) setup and schema design.
-- [ ] Day 3: Workflow automation with GitHub Actions.
+- [x] Day 3: Workflow automation with GitHub Actions.
 - [ ] Day 4: Live Power BI dashboard development.
 
 ## 🛠 Technical Skills Demonstrated (Day 1)
@@ -44,7 +44,6 @@ By transitioning from static datasets to a **live-streaming architecture**, this
 * **Schema Design & Management:** Architected a relational table structure in the cloud to support time-series analysis, enabling the tracking of air quality fluctuations over time.
 * **IAM & Security Orchestration:** Configured Google Cloud Service Accounts with granular IAM roles. Managed secure authentication via JSON key files, adhering to the principle of least privilege.
 
-
 ### 🔒 Professional DevOps Hygiene
 * **Secrets Management (Level 2):** Expanded the security layer to include Cloud Project IDs and Dataset IDs within `.env`, ensuring the codebase is entirely generic and portable.
 * **Environment Protection:** Rigorously maintained `.gitignore` protocols to prevent the accidental exposure of Cloud Service Account keys to public repositories.
@@ -53,3 +52,20 @@ By transitioning from static datasets to a **live-streaming architecture**, this
 ### 📊 Data Integrity & Validation
 * **Idempotency & Appending:** Verified that the pipeline successfully appends new observations without duplicating historical data, maintaining a clean "Source of Truth" in the warehouse.
 * **Validation Testing:** Performed live "end-to-end" tests, confirming that real-time API value changes (NO2 and PM2.5) were accurately reflected in the BigQuery Preview layer.
+
+## 🛠 Technical Skills Demonstrated (Day 3)
+
+### 🤖 Workflow Orchestration & CI/CD
+* **GitHub Actions Implementation:** Engineered a production-grade YAML workflow to automate the ETL pipeline. The system is configured to trigger on a `cron` schedule (Daily at 09:00 UTC) and via `workflow_dispatch` for manual testing.
+* **Linux Runner Configuration:** Orchestrated the automated provisioning of ephemeral Ubuntu environments, ensuring Python dependency parity between local development and cloud execution.
+* **Automated Dependency Management:** Optimized `requirements.txt` to a lean, production-ready state, reducing build times and eliminating system-level conflicts (e.g., resolving `bcc` kernel headers errors).
+
+### 🔐 Enterprise-Grade Secret Management
+* **Encrypted Vault Integration:** Transitioned sensitive credentials (GCP Service Account Keys, API Keys, and Project IDs) from local `.env` files to **GitHub Encrypted Secrets**.
+* **Runtime Secret Injection:** Developed the pipeline logic to dynamically reconstruct the `gcp-key.json` authentication file at runtime, ensuring no credentials persist in the repository history.
+* **Workflow Scoping:** Managed granular Personal Access Token (PAT) permissions, specifically implementing the `workflow` scope to maintain secure version control over CI/CD configurations.
+
+### 📈 System Monitoring & Reliability
+* **Stateless Execution:** Designed the script to be entirely "stateless," allowing the automation to fail or succeed without corrupting the historical data stored in BigQuery.
+* **Build Status Monitoring:** Utilized GitHub Action logs as a centralized debugging console, providing full traceability of network requests and cloud write operations.
+* **Data Continuity:** Successfully verified "hands-off" data ingestion, observing real-time fluctuations in urban $NO_2$ and $PM_{2.5}$ levels captured automatically by the "Robot."
