@@ -5,6 +5,9 @@ This project is an automated **End-to-End Data Pipeline** designed to monitor an
 
 By transitioning from static datasets to a **live-streaming architecture**, this project demonstrates how to build a scalable monitoring system that provides actionable insights into urban pollution levels ($NO_2$, $PM_{2.5}$, and $O_3$).
 
+<img width="764" height="520" alt="main insight shot" src="https://github.com/user-attachments/assets/486f3696-f6b7-42af-b5eb-406543874163" />
+
+
 ## 🛠️ Tech Stack
 * **Extraction:** Python (Requests, Pandas)
 * **API:** OpenWeatherMap Air Pollution API
@@ -70,7 +73,13 @@ By transitioning from static datasets to a **live-streaming architecture**, this
 * **Build Status Monitoring:** Utilized GitHub Action logs as a centralized debugging console, providing full traceability of network requests and cloud write operations.
 * **Data Continuity:** Successfully verified "hands-off" data ingestion, observing real-time fluctuations in urban $NO_2$ and $PM_{2.5}$ levels captured automatically by the "Robot."
 
+<img width="1794" height="894" alt="google bigquery on day 4" src="https://github.com/user-attachments/assets/d72fcdc9-2c87-4886-bbbf-c9ec4eddc090" />
+
+
 ## 🛠 Technical Skills Demonstrated (Day 4)
+
+<img width="1236" height="776" alt="technical depth shot" src="https://github.com/user-attachments/assets/a588c596-04a8-448c-8953-2a53ee021042" />
+
 
 ### 📊 Business Intelligence & Data Visualization
 * **Cloud-Native BI Integration:** Orchestrated a live connection between Google BigQuery and Looker Studio using the `uk_aqi_logs` table, enabling real-time data streaming from the cloud warehouse to the visualization layer.
