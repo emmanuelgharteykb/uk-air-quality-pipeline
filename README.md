@@ -22,7 +22,7 @@ By transitioning from static datasets to a **live-streaming architecture**, this
 - [x] Day 1: API Integration and local Python extraction.
 - [x] Day 2: Cloud Database (BigQuery) setup and schema design.
 - [x] Day 3: Workflow automation with GitHub Actions.
-- [ ] Day 4: Live Power BI dashboard development.
+- [x] Day 4: Live Power BI dashboard development.
 
 ## 🛠 Technical Skills Demonstrated (Day 1)
 
@@ -69,3 +69,16 @@ By transitioning from static datasets to a **live-streaming architecture**, this
 * **Stateless Execution:** Designed the script to be entirely "stateless," allowing the automation to fail or succeed without corrupting the historical data stored in BigQuery.
 * **Build Status Monitoring:** Utilized GitHub Action logs as a centralized debugging console, providing full traceability of network requests and cloud write operations.
 * **Data Continuity:** Successfully verified "hands-off" data ingestion, observing real-time fluctuations in urban $NO_2$ and $PM_{2.5}$ levels captured automatically by the "Robot."
+
+## 🛠 Technical Skills Demonstrated (Day 4)
+
+### 📊 Business Intelligence & Data Visualization
+* **Cloud-Native BI Integration:** Orchestrated a live connection between Google BigQuery and Looker Studio using the `uk_aqi_logs` table, enabling real-time data streaming from the cloud warehouse to the visualization layer.
+* **Metric Engineering:** Developed calculated fields and custom aggregations, such as Average AQI, to transform raw telemetry into high-level KPI scorecards for executive reporting.
+* **Time-Series Analysis:** Engineered multi-city trend charts to monitor fluctuations in $PM_{2.5}$ and $NO_2$ levels, providing longitudinal insights into urban pollution patterns.
+* **Interactive Data Storytelling:** Implemented dynamic tooltips and breakdown dimensions by city, allowing stakeholders to drill down into specific data points for London, Birmingham, Manchester, and Glasgow.
+
+### ⚙️ Data Modeling & System Validation
+* **Temporal Data Granularity:** Optimized time-series charts by configuring the timestamp dimension to group data by "Date," effectively transforming discrete API "pings" into continuous trend lines.
+* **Automated Data Continuity:** Verified system reliability by observing successful data fetching and dashboard updates over a 48-hour "hands-off" period, confirming the stability of the GitHub Actions orchestration.
+* **Schema Alignment:** Synchronized the Looker Studio data schema with BigQuery fields (AQI, City, $NO_2$, $PM_{2.5}$, and Timestamp) to ensure 100% data integrity throughout the visualization process.
