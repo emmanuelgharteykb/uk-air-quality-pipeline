@@ -91,3 +91,6 @@ By transitioning from static datasets to a **live-streaming architecture**, this
 * **Temporal Data Granularity:** Optimized time-series charts by configuring the timestamp dimension to group data by "Date," effectively transforming discrete API "pings" into continuous trend lines.
 * **Automated Data Continuity:** Verified system reliability by observing successful data fetching and dashboard updates over a 48-hour "hands-off" period, confirming the stability of the GitHub Actions orchestration.
 * **Schema Alignment:** Synchronized the Looker Studio data schema with BigQuery fields (AQI, City, $NO_2$, $PM_{2.5}$, and Timestamp) to ensure 100% data integrity throughout the visualization process.
+
+### 🏆 Final Project Delivery
+* **Live Dashboard:** https://lookerstudio.google.com/reporting/776bc0eb-6b94-436f-bd0d-9069be876a23
